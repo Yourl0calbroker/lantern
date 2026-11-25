@@ -13,7 +13,8 @@ it is worth noting that I am not good with 3ds app building so the UI will be ba
 
 1. Add the companion plug-in to SillyTavern (once its setup)
 2. Install APK and follow setup instructions
-3. Leave SillyTavern running on a web browser that can be minimized if needed. (Lightweight browsers such as Falkcon are recommended for those worried about wasted compute)
+3. Leave SillyTavern running on a web browser that can be minimized if needed.
+ (Lightweight browsers such as Falkcon are recommended for those worried about wasted compute)
 
 
 # Disclaimer
