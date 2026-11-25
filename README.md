@@ -1,5 +1,5 @@
 # Lantern
-An extensive project to give android a dedicated SillyTavern app
+features will go here when i ype it out
 
 
 
