@@ -1,5 +1,8 @@
 # lantern
-An extensive project to give android a dedicated Silly Tavern app 
+An extensive project to give android a dedicated Silly Tavern app
+
+# Coming Soon
+Work is being done to bring Silly Tavern to the 3ds with TailScale connected, a working build has been established, however there are still bugs being fixed before public release
 
 
 # Disclaimer
