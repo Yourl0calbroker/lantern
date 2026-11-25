@@ -5,6 +5,7 @@ An extensive project to give android a dedicated SillyTavern app
 
 # Coming Soon
 Work is being done to bring Silly Tavern to the 3ds with TailScale connected, a working build has been established, however there are still bugs being fixed before public release
+
 it is worth noting that I am not good with 3ds app building so the UI will be barebones, it will serve as more of a proof of concept until it can be polished
 
 
