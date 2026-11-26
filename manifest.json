@@ -1,0 +1,12 @@
+{
+    "display_name": "Lantern Bridge",
+    "loading_order": 20,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "pc/extension/style.css",
+    "author": "Yourl0calbroker",
+    "version": "1.1.0",
+    "homePage": "https://github.com/Yourl0calbroker/lantern",
+    "auto_update": true
+}
