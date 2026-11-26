@@ -268,8 +268,10 @@ async function startGeneration(payload) {
         },
         onToken: text => {
             if (state.activeJob !== job || TERMINAL.has(job.status)) return;
-            job.text += text;
-            job.pendingText += text;
+            // SillyTavern emits the full response-so-far, not a delta. The
+            // newest snapshot replaces the old one; appending duplicates words.
+            job.text = text;
+            job.pendingText = text;
             if (!state.flushTimer) {
                 state.flushTimer = setTimeout(flushTokens, 45);
             }
@@ -356,7 +358,7 @@ function flushTokens() {
     }
     const text = job.pendingText;
     job.pendingText = '';
-    sendJob({ event: 'token', text });
+    sendJob({ event: 'sync', text });
 }
 
 function cancelJob(jobId) {
