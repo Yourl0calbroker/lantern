@@ -1,0 +1,127 @@
+.lantern-panel {
+    border: 1px solid var(--SmartThemeBorderColor, rgba(128, 128, 128, 0.35));
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 0.92em;
+}
+
+.lantern-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.lantern-head strong {
+    flex: 1;
+}
+
+.lantern-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8a8175;
+    flex: none;
+}
+
+.lantern-dot[data-state="ready"] {
+    background: #7fa87a;
+}
+
+.lantern-dot[data-state="waiting"] {
+    background: #c9a25c;
+}
+
+.lantern-dot[data-state="error"],
+.lantern-dot[data-state="offline"] {
+    background: #b96d61;
+}
+
+.lantern-status,
+.lantern-meta {
+    opacity: 0.72;
+    font-size: 0.88em;
+}
+
+.lantern-copy {
+    margin: 0 0 10px;
+    opacity: 0.82;
+    line-height: 1.45;
+}
+
+.lantern-connection {
+    margin-bottom: 8px;
+}
+
+.lantern-address {
+    display: inline-block;
+    font-family: var(--monoFontFamily, monospace);
+    font-size: 1.05em;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background: rgba(127, 127, 127, 0.12);
+    user-select: all;
+}
+
+.lantern-code-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.lantern-code {
+    font-family: var(--monoFontFamily, monospace);
+    font-size: 1.6em;
+    letter-spacing: 0.16em;
+    padding: 4px 8px;
+    border: 1px solid var(--SmartThemeBorderColor, rgba(128, 128, 128, 0.35));
+    border-radius: 4px;
+    user-select: all;
+}
+
+.lantern-actions {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0 8px;
+}
+
+.lantern-host {
+    margin-bottom: 8px;
+}
+
+.lantern-subhead {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.lantern-update {
+    padding: 8px 0;
+    border-top: 1px solid var(--SmartThemeBorderColor, rgba(128, 128, 128, 0.2));
+}
+
+.lantern-update-status {
+    min-height: 1.2em;
+}
+
+.lantern-update-actions {
+    margin: 6px 0 0;
+}
+
+.lantern-device {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 4px 0;
+    border-top: 1px solid var(--SmartThemeBorderColor, rgba(128, 128, 128, 0.2));
+}
+
+.lantern-device-name {
+    font-weight: 600;
+}
+
+.lantern-unpair {
+    margin-left: auto;
+}
