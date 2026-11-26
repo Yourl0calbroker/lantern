@@ -2,7 +2,7 @@
 
 Lantern is a native Kotlin/Jetpack Compose Android client for a PC-hosted SillyTavern and KoboldCpp setup. It is not a WebView wrapper, PWA, or second inference engine. SillyTavern stays authoritative for characters, chats, lorebooks, presets, settings, prompts, and generation.
 
-**Current releases:** Android `1.5.2` (tag `App`) · Bridge `1.1.0` (tag `WebApp`) · Verified with SillyTavern `1.19.1`.
+**Current releases:** Android `1.5.3` (tag `App`) · Bridge `1.1.1` (tag `WebApp`) · Verified with SillyTavern `1.19.1`.
 
 ## Contents
 
@@ -19,7 +19,7 @@ Lantern is a native Kotlin/Jetpack Compose Android client for a PC-hosted SillyT
 
 ## Project status
 
-Lantern Android `1.5.2` is usable for day-to-day chat with a running SillyTavern bridge. The release and debug APKs were built and signed successfully, and an in-place `1.5.1 → 1.5.2` OTA was verified on device with pairing, token, preferences, and app data preserved.
+Lantern Android `1.5.3` is usable for day-to-day chat with a running SillyTavern bridge. The release and debug APKs are built and signed, and an in-place `1.5.1 → 1.5.2` OTA was previously verified on device with pairing, token, preferences, and app data preserved. Version `1.5.3` fixes duplicated words during streamed replies.
 
 Validation is live API and on-device QA; there is no automated unit or instrumentation test suite. Some deeper interactions remain unverified, including real-generation timing, web app page load, and the silent Tail Lock reconnect after a controlled network drop. Treat the project as a carefully tested beta rather than a finished, formally certified release.
 
@@ -56,7 +56,7 @@ Install the signed release APK from the `App` release:
 For local/package installs:
 
 ```powershell
-adb install -r apks\lantern-release-1.5.2.apk
+adb install -r apks\lantern-release-1.5.3.apk
 ```
 
 Debug and release builds use different application ids (`com.lantern.app.debug` and `com.lantern.app`), so they can coexist. The release build uses a local self-signed key. If Android rejects a signature change from an older install, uninstall that older release first.
