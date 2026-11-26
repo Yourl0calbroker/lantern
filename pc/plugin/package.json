@@ -1,0 +1,7 @@
+{
+  "name": "lantern-bridge",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js"
+}
