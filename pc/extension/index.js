@@ -25,6 +25,14 @@ const state = {
 
 const TERMINAL = new Set(['done', 'error', 'canceled']);
 
+function safeHeaders() {
+    try {
+        return requestHeaders();
+    } catch {
+        return {};
+    }
+}
+
 async function start() {
     if (window.__lanternBridgeStarted) {
         return;
@@ -36,13 +44,7 @@ async function start() {
     state.stVersion = await fetchVersion();
 
     state.panel = new LanternPanel({
-        getHeaders: () => {
-            try {
-                return requestHeaders();
-            } catch {
-                return {};
-            }
-        },
+        getHeaders: safeHeaders,
         onReconnect: () => {
             state.replaced = false;
             if (state.ws) {
@@ -94,7 +96,7 @@ async function connect() {
     clearTimeout(state.reconnectTimer);
 
     try {
-        const response = await fetch('/api/plugins/lantern-bridge/host', { headers: requestHeaders() });
+        const response = await fetch('/api/plugins/lantern-bridge/host', { headers: safeHeaders() });
         if (!response.ok) {
             throw new Error(response.status === 404
                 ? 'Lantern Bridge is not installed or server plugins are disabled.'
