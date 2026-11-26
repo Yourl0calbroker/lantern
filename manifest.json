@@ -4,8 +4,8 @@
     "requires": [],
     "optional": [],
     "js": "index.js",
-    "css": "style.css",
-    "author": "Lantern",
+    "css": "pc/extension/style.css",
+    "author": "Yourl0calbroker",
     "version": "1.1.2",
     "homePage": "https://github.com/Yourl0calbroker/lantern",
     "auto_update": true
