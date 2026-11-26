@@ -1,6 +1,17 @@
 let modules = null;
 let missing = [];
 
+function stRootPrefix() {
+    const parts = new URL(import.meta.url).pathname.split('/').filter(Boolean);
+    const marker = parts.findIndex((part, index) => part === 'scripts'
+        && parts[index + 1] === 'extensions'
+        && parts[index + 2] === 'third-party');
+    const rootDepth = marker >= 0 ? marker : 0;
+    return '../'.repeat(Math.max(0, parts.length - 1 - rootDepth));
+}
+
+const ROOT_PREFIX = stRootPrefix();
+
 export class StError extends Error {
     constructor(code, message, status = 409) {
         super(message);
@@ -16,11 +27,11 @@ export async function loadSillyTavern() {
 
     try {
         const [script, events, world, textgen, preset] = await Promise.all([
-            import('../../../../script.js'),
-            import('../../../events.js'),
-            import('../../../world-info.js'),
-            import('../../../textgen-settings.js'),
-            import('../../../preset-manager.js'),
+            import(`${ROOT_PREFIX}script.js`),
+            import(`${ROOT_PREFIX}scripts/events.js`),
+            import(`${ROOT_PREFIX}scripts/world-info.js`),
+            import(`${ROOT_PREFIX}scripts/textgen-settings.js`),
+            import(`${ROOT_PREFIX}scripts/preset-manager.js`),
         ]);
         modules = { script, events, world, textgen, preset };
     } catch (error) {
