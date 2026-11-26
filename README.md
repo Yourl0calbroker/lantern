@@ -2,7 +2,7 @@
 
 Lantern is a native Kotlin/Jetpack Compose Android client for a PC-hosted SillyTavern and KoboldCpp setup. It is not a WebView wrapper, PWA, or second inference engine. SillyTavern stays authoritative for characters, chats, lorebooks, presets, settings, prompts, and generation.
 
-**Current releases:** Android `1.5.3` (tag `App`) · Bridge `1.1.1` (tag `WebApp`) · Verified with SillyTavern `1.19.1`.
+**Current releases:** Android `1.5.3` (tag `App`) · Bridge `1.1.2` (tag `WebApp`) · Verified with SillyTavern `1.19.1`.
 
 ## Contents
 
